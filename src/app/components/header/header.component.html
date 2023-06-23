@@ -1,0 +1,39 @@
+<div class="nav">
+<div class="navbar-com">
+
+        <div class="image-container" *ngFor="let slide of slides">
+            <img [src]="slide.image" alt="">
+
+        </div>
+    </div>
+
+    <div class="home-btn">
+        <button 
+        class="check-btn count-product"
+        routerLink="home"
+
+        >Home</button>
+    </div>
+
+    <div class="check-space">
+        <!-- <span nz-icon nzType="shopping-cart" nzTheme="outline"></span> -->
+        <button 
+        class="check-btn count-product"
+        routerLink="cart"
+
+        >{{itemsQuantity}} produits</button>
+
+        <button 
+        class="check-btn count-product"
+        routerLink="cart"
+
+        >See cart</button>
+
+        <button 
+        class="check-btn clear-cart"
+        (click)="onClearCart()"
+        > Clear Cart</button>
+    </div>
+</div>
+
+    

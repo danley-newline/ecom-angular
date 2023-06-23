@@ -1,0 +1,55 @@
+
+<div class="cart" *ngIf="cart.items.length">
+    <table>
+        <thead>
+            <tr>
+                <th class="cart__thead">product</th>
+                <th class="cart__thead">name</th>
+                <th class="cart__thead">price</th>
+                <th class="cart__thead">quantity</th>
+                <th class="cart__thead">total</th>
+                <th class="cart__thead">action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let element of cart.items">
+                <td class="cart__tbody" > <img [src]="element.product" alt="Image"></td>
+                <td class="cart__tbody">{{element.name}}</td>
+                <td class="cart__tbody">{{element.price | currency}}</td>
+                <td class="cart__tbody">
+                    <div class="cart__tbody__checkquantity">
+                        <span (click)="onRemoveQuantity(element)"> - </span>
+                        <span>{{element.quantity}}</span>
+                        <span (click)="onAddQuantity(element)">  + </span>
+                    </div>
+                </td>
+                <td class="cart__tbody">{{element.quantity * element.price}}</td>
+                <td class="cart__tbody">
+                    <span class="remove-icon" style="cursor: pointer;" (click)="onRemoveFromCart(element)">x</span>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"> 
+                    <div class="cart__tfoot_button">
+                    <button class="success-btn">Continue Shoping</button> 
+                    <button class="remove-btn" (click)="onClearCart()">Clear All</button> 
+
+                    </div>
+                </td>
+                <td colspan="4"> <span>Cart Mount : </span> {{getTotal(cart.items) | currency}} </td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+</div>
+
+<div class="cart" *ngIf="!cart.items.length">
+    <p>Your cart is empty</p>
+    <button class="shop-button" routerLink="/home">Start shopping</button>
+
+</div>

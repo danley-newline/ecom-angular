@@ -1,0 +1,125 @@
+.cart{
+    padding: 25px;
+    &__tbody{
+
+        img{
+            width: 150px;
+            height: 150px;
+        }
+
+        &__checkquantity{
+            display: flex;
+            align-items: center;   
+            
+            span{
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__tfoot_button {
+        display: flex;
+        gap: 10px;
+        width: 40%;
+        padding: 10px;
+    }
+}
+
+.remove-icon {
+  padding: 5px 9px;
+  background: red;
+  border-radius: 50%;
+  color: #fff;
+
+  &:hover{
+    background: #000;
+  }
+}
+
+tr,
+td,
+th {
+  padding: 0.5rem 1rem !important;
+}
+
+table {
+  border-top: 2px solid #49ace2;
+  border-bottom: none;
+  background: #fff;
+  th,
+  td {
+    text-align: center;
+    &:first-child {
+      text-align: left;
+      // padding-left: 0.5vw;
+    }
+  }
+  thead {
+    tr:nth-child(1) {
+      th:first-child {
+        color: #9d9d9d;
+        font-weight: normal;
+        // padding-left: 0.5vw;
+        border-left: none;
+      }
+      th:last-child,
+      th:nth-last-child(2) {
+        background: #78d551;
+        color: #0f4476;
+        border-left: 3px solid #0f4476;
+      }
+    }
+  }
+
+  tbody {
+    td:last-child,
+    td:nth-last-child(2) {
+      background: #f1fbed;
+      font-weight: bold;
+      color: #56b52f;
+      border-left: 3px solid #0f4476;
+    }
+    td {
+      border: 1px solid #ccc;
+    }
+  }
+
+  tfoot {
+    background: #e2ebff;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    td:last-child,
+    td:nth-last-child(2) {
+      border-left: 3px solid #0f4476;
+    }
+  }
+
+  th {
+    border: 2px solid #49ace2;
+  }
+  td,
+  tr:nth-child(2) th,
+  th {
+    &:nth-child(1) {
+      border-right: 3px solid #0f4476;
+    }
+  }
+
+  td,
+  tr:nth-child(2) th {
+    &:nth-child(4),
+    &:nth-child(7),
+    &:nth-child(10),
+    &:nth-child(13),
+    &:nth-child(16),
+    &:nth-child(19) {
+      border-right: 2px solid #49ace2;
+    }
+  }
+
+  tr:nth-child(2) th {
+    color: #0f4476;
+    background: #e2ebff;
+    border: 1px solid #ccc;
+  }
+}

@@ -1,0 +1,59 @@
+button{
+  margin: 4px;
+  border-radius: 5px;
+  padding: 2px;
+  font-weight: bold;
+  border: 2px solid #fff;
+  }
+  .check-btn{
+    cursor: pointer;
+
+   
+  }
+
+  .nav{
+    position: relative;
+  }
+
+  .navbar-com{
+    background-color: #000;
+    display: flex;
+    gap: 10px;
+    height: 26rem;
+    position: relative;
+    margin-bottom: 20px;
+
+
+    .image-container{
+      -webkit-transform : rotate(18deg); 
+      -moz-transform : rotate(18deg); 
+      -ms-transform : rotate(18deg); 
+      -o-transform : rotate(18deg); 
+      transform : rotate(18deg); 
+
+      border: 4px solid #fff;
+
+      img{
+        height: 100%;
+      }
+    }
+  }
+
+  .check-space, .home-btn{
+    top: 8px;
+    width: 12%;
+    background: #3b3737a1;
+    border-radius: 11px;
+    padding: 10px;
+  }
+
+  .home-btn{
+    left: 0;
+    position: absolute;
+  }
+
+  .check-space{
+    position: fixed;
+    right: 0;
+  }
+    

@@ -1,0 +1,21 @@
+<div class="home-product">
+    <div class="espace">
+    <div class="espace-categ">
+        <div class="espace-categ__span" (click)="checkActiveClass('all')" [class.active]="'all' === activeClass">
+            <span>All products</span>
+        </div>
+        <div class="espace-categ__span" *ngFor="let categ of categories" (click)="checkActiveClass(categ)" [class.active]="categ === activeClass">
+            <span>{{categ}}</span>
+        </div>
+    </div>
+    </div>
+    <div class="product-block">
+        <div class="product_card" *ngFor="let product of products" >        
+            <app-product-box 
+            (addToCart)="onAddToCart($event)"
+            [product]="product"
+            ></app-product-box>
+        </div>
+    </div>
+</div>
+
